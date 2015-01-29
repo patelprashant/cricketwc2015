@@ -1,0 +1,433 @@
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+}
+
+h1, h2, h3, h4{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2vw;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+
+.card {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  -webkit-perspective: 5000;
+  perspective: 5000;
+  border: 10px solid rgb(239, 239, 239);
+  box-shadow: 2px 5px 7px 2px darkgray;
+}
+
+.card .container {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.card .container .front, .card .container .back {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card .container .front .row, .card .container .front .column, .card .container .front .columns, .card .container .back .row, .card .container .back .column, .card .container .back .columns {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card .container .front {
+  z-index: 2;
+}
+
+.card .container .back {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: white;
+  box-shadow: 1px 1px 7px 1px lightgrey inset;
+
+}
+
+.card .container:hover {
+  -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.card .container .front, .card .container .back {
+  padding: 1em;
+}
+
+.card.square .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+/********** 75x75 **********/
+.tLogo75x {
+  width: 75px;
+  height: 75px;
+  background-image: url('../images/icc-team-sprite-75x.jpg');
+  margin-left: 25%;
+}
+.tLogo75x.AFG,
+.tLogo75x.AFGw,
+.tLogo75x.AFGu19 {
+  background-position: 0 -80px;
+}
+.tLogo75x.AUS,
+.tLogo75x.AUSw,
+.tLogo75x.AUSu19 {
+  background-position: 0 -160px;
+}
+.tLogo75x.BAN,
+.tLogo75x.BANw,
+.tLogo75x.BANu19,
+.tLogo75x.BANA {
+  background-position: 0 -240px;
+}
+.tLogo75x.BRM,
+.tLogo75x.BRMw,
+.tLogo75x.BRMu19 {
+  background-position: 0 -320px;
+}
+.tLogo75x.CAN,
+.tLogo75x.CANw,
+.tLogo75x.CANu19 {
+  background-position: 0 -400px;
+}
+.tLogo75x.ENG,
+.tLogo75x.ENGw,
+.tLogo75x.ENGu19 {
+  background-position: 0 -480px;
+}
+.tLogo75x.IND,
+.tLogo75x.INDw,
+.tLogo75x.INDu19 {
+  background-position: 0 -560px;
+}
+.tLogo75x.IRE,
+.tLogo75x.IREw,
+.tLogo75x.IREu19 {
+  background-position: 0 -640px;
+}
+.tLogo75x.KEN,
+.tLogo75x.KENw,
+.tLogo75x.KENu19 {
+  background-position: 0 -720px;
+}
+.tLogo75x.NL,
+.tLogo75x.NLw,
+.tLogo75x.NLu19 {
+  background-position: 0 -800px;
+}
+.tLogo75x.NZ,
+.tLogo75x.NZw,
+.tLogo75x.NZu19,
+.tLogo75x.NZXI {
+  background-position: 0 -880px;
+}
+.tLogo75x.NZw {
+  background-position: 0 -1435px;
+}
+.tLogo75x.PAK,
+.tLogo75x.PAKw,
+.tLogo75x.PAKu19 {
+  background-position: 0 -960px;
+}
+.tLogo75x.JSY,
+.tLogo75x.JSYw,
+.tLogo75x.JSYu19 {
+  background-position: 0px -1040px;
+}
+.tLogo75x.HKG,
+.tLogo75x.HKGw,
+.tLogo75x.HKGu19 {
+  background-position: 0px -1120px;
+}
+.tLogo75x.PNG,
+.tLogo75x.PNGw,
+.tLogo75x.PNGu19 {
+  background-position: 0px -1200px;
+}
+.tLogo75x.ARG,
+.tLogo75x.ARGw,
+.tLogo75x.ARGu19 {
+  background-position: 0px -1280px;
+}
+.tLogo75x.ITA,
+.tLogo75x.ITAw,
+.tLogo75x.ITAu19 {
+  background-position: 0px -1360px;
+}
+.tLogo75x.SA,
+.tLogo75x.SAw,
+.tLogo75x.SAu19 {
+  background-position: -80px 0px;
+}
+.tLogo75x.SCO,
+.tLogo75x.SCOw,
+.tLogo75x.SCOu19 {
+  background-position: -80px -80px;
+}
+.tLogo75x.SL,
+.tLogo75x.SLw,
+.tLogo75x.SLu19 {
+  background-position: -80px -160px;
+}
+.tLogo75x.TBD {
+  background-position: -80px -240px;
+}
+.tLogo75x.WI,
+.tLogo75x.WIw,
+.tLogo75x.WIu19 {
+  background-position: -80px -320px;
+}
+.tLogo75x.ZIM,
+.tLogo75x.ZIMw,
+.tLogo75x.ZIMu19 {
+  background-position: -80px -400px;
+}
+.tLogo75x.UAE,
+.tLogo75x.UAEw,
+.tLogo75x.UAEu19 {
+  background-position: -80px -480px;
+}
+.tLogo75x.NAM,
+.tLogo75x.NAMw,
+.tLogo75x.NAMu19 {
+  background-position: -80px -560px;
+}
+.tLogo75x.KUW,
+.tLogo75x.KUWw,
+.tLogo75x.KUWu19 {
+  background-position: -80px -640px;
+}
+.tLogo75x.NGR,
+.tLogo75x.NGRw,
+.tLogo75x.NGRu19 {
+  background-position: -80px -720px;
+}
+.tLogo75x.VAN,
+.tLogo75x.VANw,
+.tLogo75x.VANu19 {
+  background-position: -80px -800px;
+}
+.tLogo75x.BRN,
+.tLogo75x.BRNw,
+.tLogo75x.BRNu19 {
+  background-position: -80px -880px;
+}
+.tLogo75x.JPN,
+.tLogo75x.JPNw,
+.tLogo75x.JPNu19 {
+  background-position: -80px -960px;
+}
+.tLogo75x.THA,
+.tLogo75x.THAw,
+.tLogo75x.THAu19 {
+  background-position: -80px -1040px;
+}
+.tLogo75x.NEP,
+.tLogo75x.NEPw,
+.tLogo75x.NEPu19 {
+  background-position: -80px -1120px;
+}
+.tLogo75x.UGA,
+.tLogo75x.UGAw,
+.tLogo75x.UGAu19 {
+  background-position: -80px -1200px;
+}
+.tLogo75x.DEN,
+.tLogo75x.DENw,
+.tLogo75x.DENu19 {
+  background-position: -80px -1280px;
+}
+.tLogo75x.USA,
+.tLogo75x.USAw,
+.tLogo75x.USAu19 {
+  background-position: -80px -1360px;
+}
+.tLogo75x.FRA,
+.tLogo75x.FRAw,
+.tLogo75x.FRAu19 {
+  background-position: -80px -1435px;
+}
+.tLogo75x.GIB,
+.tLogo75x.GIBw,
+.tLogo75x.GIBu19 {
+  background-position: -160px 0;
+}
+.tLogo75x.GSY,
+.tLogo75x.GSYw,
+.tLogo75x.GSYu19 {
+  background-position: -160px -80px;
+}
+.tLogo75x.ISR,
+.tLogo75x.ISR,
+.tLogo75x.ISRu19 {
+  background-position: -160px -160px;
+}
+.tLogo75x.MAS,
+.tLogo75x.MASw,
+.tLogo75x.MASu19 {
+  background-position: -160px -240px;
+}
+.tLogo75x.SIN,
+.tLogo75x.SINw,
+.tLogo75x.SINu19 {
+  background-position: -160px -315px;
+}
+.tLogo75x.OMA,
+.tLogo75x.OMAW,
+.tLogo75x.OMAu19 {
+  background-position: -160px -400px;
+}
+.tLogo75x.AUK {
+  background-position: -160px -480px;
+}
+.tLogo75x.NSW2 {
+  background-position: -160px -640px;
+}
+.tLogo75x.NT {
+  background-position: -160px -800px;
+}
+.tLogo75x.QUE {
+  background-position: -160px -720px;
+}
+.tLogo75x.TAS {
+  background-position: -160px -560px;
+}
+.tLogo75x.WA {
+  background-position: -160px -880px;
+}
+.tLogo75x.SAus {
+  background-position: -160px -960px;
+}
+.tLogo75x.ACT {
+  background-position: -160px -1040px;
+}
+.tLogo75x.CTB {
+  background-position: -160px -1120px;
+}
+.tLogo75x.OTA {
+  background-position: -160px -1200px;
+}
+.tLogo75x.ND {
+  background-position: -160px -1280px;
+}
+.tLogo75x.WEL {
+  background-position: -160px -1360px;
+}
+@media only screen and (min-device-pixel-ratio: 2) {
+  .tLogo75x {
+    background-image: url(../img/team-logos/icc-team-sprite-75x@x2.jpg);
+    background-size: 235px 1510px;
+  }
+}
+
+
+
+/***Foundation Override**/
+.accordion dd {
+  border: 1px solid #C3C3C3;
+  margin: 10px 0;
+}
+.accordion .content{
+  background-color: #CDCDCD;
+}
+
+
+/***match data**/
+.matchInfo{
+  text-align: center;
+  padding: 1em 0.5em;
+}
+.matchInfo h3{
+  font-weight: bold;
+}

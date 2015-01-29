@@ -1,0 +1,88 @@
+<div ng-controller="MainCtrl">
+  <div class="row">
+    <div class="large-4 columns">
+      <label>
+        <select ng-model="filterPoolTypeItem.poolType" ng-options="item.groupName for item in filterByPoolOptions.poolTypes">
+    </select>
+        </select>
+      </label>
+    </div>
+    <div class="large-4 columns">
+      <!-- <label>
+        <select>
+          <option value="0">All Teams</option>
+          <option value="pool-b">Pool B</option>
+          <option value="knockouts">Knockouts</option>
+        </select>
+      </label> -->
+    </div>
+    <div class="large-4 columns">
+      <!-- <label>
+        <select>
+          <option value="pool-a">Host Cities</option>
+          <option value="pool-b">Pool B</option>
+          <option value="knockouts">Knockouts</option>
+        </select>
+      </label> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="large-4 columns">
+        <label class="checkbox">
+            <input type="checkbox" ng-model="oneAtATime">Open only one at a time
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="container">
+      <accordion close-others="oneAtATime">
+          <accordion-group is-open="isopen" ng-repeat="group in matchDataList | filter:filterByPool">
+              <accordion-heading>
+                  {{group.description}} - {{group.groupName}}
+                  <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i>
+              </accordion-heading>
+              <div class="row">
+                  <div class="large-4 small-12 columns">
+                      <div class="card square">
+                          <div class="container">
+                              <div class="front" style="background-color:#{{group.team1.team.primaryColor}}">
+                                  <div class="tLogo75x {{group.team1.team.abbreviation}}"></div>
+                              </div>
+                              <div class="back matchInfo">
+                                  <h3>{{group.team1.team.fullName | uppercase}}</h3>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="large-4 small-12 columns">
+                    <div class="matchInfo">
+                      <div>{{group.venue.fullName}}</div>
+                      <div>{{group.venue.city}}</div>
+                      <div>{{group.venue.country}}</div>
+                      <div class="matchDate">{{group.matchDate | date:"MMM d, y 'at' h:mma"}}</div>
+                    </div>
+                  </div>
+                  <div class="large-4 small-12 columns">
+
+                      <div class="card square">
+                          <div class="container">
+                              <div class="front" style="background-color:#{{group.team2.team.primaryColor}}">
+                                  <div class="tLogo75x {{group.team2.team.abbreviation}}"></div>
+                              </div>
+                              <div class="back matchInfo">
+                                  <h3>{{group.team2.team.fullName | uppercase}}</h3>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</div>
